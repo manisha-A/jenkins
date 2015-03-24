@@ -1,6 +1,7 @@
 package jenkins.steps;
 
 import jenkins.pages.DictionaryPage;
+import jenkins.pages.SearchPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
@@ -11,6 +12,7 @@ import static org.hamcrest.Matchers.hasItem;
 public class EndUserSteps extends ScenarioSteps {
 
     DictionaryPage dictionaryPage;
+    SearchPage searchPage;
 
     @Step
     public void enters(String keyword) {
@@ -46,5 +48,30 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void search_cheese() {
         dictionaryPage.search_cheese();
+    }
+
+    @Step
+    public void is_amazon_page(){
+        searchPage.go_to_amazon();
+    }
+
+    @Step
+    public void search_for_book(String book){
+        searchPage.search_book(book);
+    }
+
+    @Step
+    public void validate_results(){
+        searchPage.validate_results();
+    }
+
+    @Step
+    public void add_item_to_cart(){
+        searchPage.add_item_to_cart();
+    }
+
+    @Step
+    public void verify_item_added(){
+        searchPage.verify_item_added();
     }
 }
