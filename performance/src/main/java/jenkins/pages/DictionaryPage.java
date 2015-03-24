@@ -2,15 +2,11 @@ package jenkins.pages;
 
 import ch.lambdaj.function.convert.Converter;
 import net.thucydides.core.annotations.DefaultUrl;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import net.thucydides.core.pages.WebElementFacade;
-
 import net.thucydides.core.annotations.findby.FindBy;
-
 import net.thucydides.core.pages.PageObject;
+import net.thucydides.core.pages.WebElementFacade;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
@@ -45,5 +41,13 @@ public class DictionaryPage extends PageObject {
                 return from.getText();
             }
         };
+    }
+
+    public  void go_google(){
+        getDriver().get("www.google.co.uk");
+    }
+
+    public  void search_cheese(){
+        getDriver().get("www.google.co.uk");
     }
 }

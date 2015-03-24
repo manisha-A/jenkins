@@ -2,10 +2,8 @@ package jenkins.steps;
 
 import jenkins.pages.DictionaryPage;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
 
-import static ch.lambdaj.Lambda.join;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasItem;
@@ -38,5 +36,15 @@ public class EndUserSteps extends ScenarioSteps {
     public void looks_for(String term) {
         enters(term);
         starts_search();
+    }
+
+    @Step
+    public void go_to_google() {
+        dictionaryPage.go_google();
+    }
+
+    @Step
+    public void search_cheese() {
+        dictionaryPage.search_cheese();
     }
 }

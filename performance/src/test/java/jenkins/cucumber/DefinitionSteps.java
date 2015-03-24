@@ -27,4 +27,14 @@ public class DefinitionSteps {
         endUser.should_see_definition(definition);
     }
 
+    @Given("^the user is on the google search page$")
+    public void the_user_is_on_the_google_search_page() throws Throwable {
+        endUser.go_to_google();
+    }
+
+    @When("^the user looks up for 'cheese'$")
+    public void the_user_looks_up_for_cheese() throws Throwable {
+        endUser.search_cheese();
+    }
+
 }
