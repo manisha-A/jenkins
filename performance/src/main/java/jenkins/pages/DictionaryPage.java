@@ -48,6 +48,6 @@ public class DictionaryPage extends PageObject {
     }
 
     public  void search_cheese(){
-        getDriver().get("www.google.co.uk");
+        getDriver().get("http://www.google.co.uk");
     }
 }
