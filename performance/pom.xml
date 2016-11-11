@@ -58,6 +58,7 @@
                 <version>2.18.1</version>
                 <configuration>
                     <skip>true</skip>
+                    <rerunFailingTestsCount>2</rerunFailingTestsCount>
                 </configuration>
             </plugin>
             <plugin>
