@@ -29,8 +29,8 @@ public class SearchPage extends PageObject {
     }
 
     public void validate_results() {
-        WebElement filter = getDriver().findElement(By.id("refinements"));
-        assert filter.getText().toString().contains("Show results for");
+        WebElement filter = getDriver().findElement(By.id("refinesdfsdfments"));
+        assert !(filter.getText().toString().contains("Showccvbcv results for"));
     }
 
     public void add_item_to_cart() {
